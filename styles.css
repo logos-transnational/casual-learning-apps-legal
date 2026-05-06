@@ -1,11 +1,14 @@
 :root {
-  color-scheme: light;
-  --background: #f7f8fb;
-  --surface: #ffffff;
-  --text: #172033;
-  --muted: #5d667a;
-  --line: #d8deea;
-  --accent: #1f5eff;
+  color-scheme: dark;
+  --background: #0f0f23;
+  --surface: #171832;
+  --surface-raised: #202342;
+  --text: #ffffff;
+  --muted: #b8c1d9;
+  --line: rgba(255, 255, 255, 0.14);
+  --accent: #4a90d9;
+  --accent-soft: rgba(74, 144, 217, 0.18);
+  --secondary: #f5a623;
 }
 
 * {
@@ -34,12 +37,13 @@ main {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.32);
   padding: clamp(24px, 5vw, 48px);
 }
 
 .eyebrow {
   margin: 0 0 8px;
-  color: var(--muted);
+  color: var(--secondary);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -54,6 +58,7 @@ h1 {
 
 h2 {
   margin: 36px 0 12px;
+  color: #dcecff;
   font-size: 1.35rem;
 }
 
@@ -72,6 +77,11 @@ li + li {
 
 a {
   color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #7db9f0;
 }
 
 .meta {
@@ -81,6 +91,7 @@ a {
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
 }
 
@@ -96,15 +107,49 @@ a {
   align-items: center;
   min-height: 40px;
   padding: 0 14px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(74, 144, 217, 0.36);
   border-radius: 8px;
-  background: var(--surface);
+  background: var(--accent-soft);
   text-decoration: none;
   font-weight: 700;
+}
+
+.language-links a:hover {
+  background: rgba(74, 144, 217, 0.28);
 }
 
 footer {
   margin-top: 32px;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+::selection {
+  background: rgba(245, 166, 35, 0.35);
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+    --background: #ffffff;
+    --surface: #ffffff;
+    --text: #111827;
+    --muted: #4b5563;
+    --line: #d1d5db;
+    --accent: #1d4ed8;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  main {
+    width: 100%;
+    padding: 0;
+  }
+
+  .policy {
+    border: 0;
+    box-shadow: none;
+  }
 }
