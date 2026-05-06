@@ -1,13 +1,19 @@
 :root {
   color-scheme: dark;
   --background: #0f0f23;
-  --surface: #171832;
-  --surface-raised: #202342;
+  --surface: #0f0f23;
+  --card: rgba(255, 255, 255, 0.031);
+  --card-strong: rgba(255, 255, 255, 0.071);
   --text: #ffffff;
-  --muted: #b8c1d9;
-  --line: rgba(255, 255, 255, 0.14);
+  --text-90: rgba(255, 255, 255, 0.9);
+  --text-70: rgba(255, 255, 255, 0.67);
+  --text-55: rgba(255, 255, 255, 0.52);
+  --muted: rgba(255, 255, 255, 0.6);
+  --line: rgba(255, 255, 255, 0.094);
+  --line-strong: rgba(255, 255, 255, 0.14);
   --accent: #4a90d9;
-  --accent-soft: rgba(74, 144, 217, 0.18);
+  --accent-soft: rgba(74, 144, 217, 0.071);
+  --accent-line: rgba(74, 144, 217, 0.25);
   --secondary: #f5a623;
 }
 
@@ -18,7 +24,7 @@
 body {
   margin: 0;
   background: var(--background);
-  color: var(--text);
+  color: var(--text-90);
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -35,10 +41,9 @@ main {
 
 .policy {
   background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.32);
-  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid rgba(74, 144, 217, 0.25);
+  border-radius: 24px;
+  padding: clamp(20px, 4.5vw, 40px);
 }
 
 .eyebrow {
@@ -58,7 +63,7 @@ h1 {
 
 h2 {
   margin: 36px 0 12px;
-  color: #dcecff;
+  color: var(--accent);
   font-size: 1.35rem;
 }
 
@@ -90,8 +95,8 @@ a:hover {
   margin: 20px 0 28px;
   padding: 16px;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  background: var(--card);
   color: var(--muted);
 }
 
@@ -107,15 +112,15 @@ a:hover {
   align-items: center;
   min-height: 40px;
   padding: 0 14px;
-  border: 1px solid rgba(74, 144, 217, 0.36);
-  border-radius: 8px;
+  border: 1px solid var(--accent-line);
+  border-radius: 12px;
   background: var(--accent-soft);
   text-decoration: none;
   font-weight: 700;
 }
 
 .language-links a:hover {
-  background: rgba(74, 144, 217, 0.28);
+  background: rgba(74, 144, 217, 0.12);
 }
 
 footer {
