@@ -123,6 +123,16 @@ a:hover {
   background: rgba(74, 144, 217, 0.12);
 }
 
+.contact-block {
+  display: grid;
+  gap: 2px;
+  margin: 0 0 16px;
+}
+
+.contact-block p {
+  margin: 0;
+}
+
 footer {
   margin-top: 32px;
   color: var(--muted);
