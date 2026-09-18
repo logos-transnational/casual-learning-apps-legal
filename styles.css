@@ -69,6 +69,7 @@ h2 {
 
 p {
   margin: 0 0 16px;
+  overflow-wrap: anywhere;
 }
 
 ul {
@@ -78,6 +79,26 @@ ul {
 
 li + li {
   margin-top: 4px;
+}
+
+.contents {
+  margin: 28px 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.contents h2 {
+  margin: 0 0 12px;
+}
+
+.contents ul {
+  margin-bottom: 0;
+}
+
+h2[id] {
+  scroll-margin-top: 24px;
 }
 
 a {
@@ -149,6 +170,7 @@ footer {
     --background: #ffffff;
     --surface: #ffffff;
     --text: #111827;
+    --text-90: #111827;
     --muted: #4b5563;
     --line: #d1d5db;
     --accent: #1d4ed8;
